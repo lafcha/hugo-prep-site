@@ -4,24 +4,6 @@ body {
     background-color : var(--primary);
 }
 
-#home{
-    background-image: url(../img/background.png);
-    background-size: cover;
-    background-position-x: -3000px;
-    height: 100vh;
-}
-
-#landing-text-box{
-    height : calc(100vh - 60px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#landing-text{
-    padding: 1rem 1rem;
-}
-
 header {
     height: 60px;
 }
@@ -121,9 +103,28 @@ p {
 
 /*HOME*/
 
+#home{
+    background-image: url(../img/background.png);
+    background-size: cover;
+    background-position-x: -2700px;
+    height: 100vh;
+}
+
 #home .headphone-icon{
     padding-top: 0;
 }
+
+#landing-text-box{
+    height : calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#landing-text{
+    padding: 1rem 1rem;
+}
+
 
 /*PRESENTATION*/
 
@@ -149,7 +150,9 @@ p {
 
 /*OUTILS*/
 
-
+#outils {
+    padding-bottom : 2rem;
+}
 #outils h2{
     color: var(--accent);
 }
@@ -174,7 +177,29 @@ p {
     text-align: center;
 }
 
+/* EQUIPE */
 
+#equipe h2 {
+    color: var(--accent);
+}
+
+#equipe h4{
+    color: var(--accent);
+}
+
+#equipe p{
+    text-align: justify;
+}
+
+#communication {
+    padding : 2rem 1rem 6rem;
+}
+.dove-icon{
+    color : var(--accent-dark);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
 
 /*VARIABLES COULEURS */
 body {
