@@ -55,6 +55,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    margin: 0;
+}
+
 .section-icon {
     font-size: 2rem;
     text-align: center;
@@ -65,8 +69,14 @@ a {
 .topnav {
     font-family: 'Orbitron', cursive;
     font-size: 0.9rem;
-    overflow: hidden;
-    position: relative;
+    position: fixed;
+    top : 0;
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width :100%;
+    height: 60px;
+    background-color: var(--primary);
 
    }
   
@@ -74,10 +84,12 @@ a {
   .topnav #myLinks {
     display: none;
     background-color: var(--accent-dark);
-    height : 400px;
-    padding-top: 30px;
+    height : 100vh;
+    width: 100%;
     list-style: none;
     padding-left: 0;
+    padding-top : 2rem;
+     
   }
   
   /* Style navigation menu links */
@@ -88,23 +100,30 @@ a {
     text-decoration: none;
     display: hidden;
     padding: 14px 16px;
-  }
+
+}
   
   .topnav a.icon {
     display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
   }
- 
-  .active {
+
+    .active {
   text-decoration: underline;
   }
   
-  #home-logo {
+
+   #home-logo {
     font-size: 1rem;
+    margin:0;
+    padding:0;
+    padding-left: 1rem;
+   line-height: 3.5rem;
+   width: 75%;
   }
 
+  #hamburger-menu {
+    width: 15%;
+  }
 
 /*HOME*/
 
