@@ -22,54 +22,61 @@
     
 </head>
 <body>
-    <!-- LANDING PAGE -->
-    <section id="home">
-        <header>
-            <div class="topnav">
-                <a id ="home-logo" href="#home" class="active">Hugo Lafarge</a>
-                <!-- Navigation links (hidden by default) -->
-              
-                <ul id="myLinks">
-                    <li><a href="#presentation">Présentation</a></li>
-                    <li><a href="#outils">Outils</a></li>
-                    <li><a href="#equipe">Préparation d'équipe</a></li>      
-                    <li><a href="#contact">Contact</a></li>          
-                </ul>
-                    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i>
-                    </a>
-            </div>
-    
-        </header>
-       
-        <section id="landing-text-box">
-            <div id="landing-text">
-                <div class="headphone-icon"><span class="iconify" data-icon="whh:headphonesalt"></span></div>
-                <h1>Hugo Lafarge</h1>
-                <h3>Préparateur mental <strong>e-sport</strong></h3>
-            </div>
+
+    <header>
+        <div class="topnav">
+
+            <a id ="home-logo" href="#home" class="active">Hugo Lafarge</a>
+            
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a id="hamurger-menu" href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i id="hamburger-icon"class="fa fa-bars"></i>
+            </a>
+          <!-- Navigation links (hidden by default) -->
+            <ul id="myLinks">
+                <li><a href="#presentation">Présentation</a></li>
+                <li><a href="#outils">Outils</a></li>
+                <li><a href="#equipe">Préparation d'équipe</a></li>      
+                <li><a href="#contact">Contact</a></li>          
+            </ul>
+
+        </div>
+    </header>
+   
+    <main>
+        <!-- HOME -->
+
+        <section id="home">
+
+            <section id="landing-text-box">
+                <div id="landing-text">
+                    <div class="section-icon"><span class="iconify" data-icon="whh:headphonesalt"></span></div>
+                    <h1>Hugo Lafarge</h1>
+                    <h3>Préparateur mental <strong>e-sport</strong></h3>
+                </div>
+            </section>
+        
         </section>
     
-    </section>
-
-    <main>
         <!-- A PROPOS -->
+
         <section id="presentation">
-            <div><img src="img/portrait.png" alt=""></div>
+            <div id="presentation-img"><img src="img/portrait.png" alt=""></div>
             <div id="presentation-text">
-                <div class="headphone-icon"><span class="iconify" data-icon="whh:headphonesalt"></span></div>
+                <div class="section-icon"><span class="iconify" data-icon="akar-icons:person"></span></span></div>
                 <h2>A propos</h2>
                 <h3>Mon parcours</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem architecto iure error aliquid earum numquam quibusdam. Cum nobis maiores quasi expedita nihil? Corrupti adipisci illum cum animi voluptatibus odit omnis?</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem architecto iure error aliquid earum numquam quibusdam. Cum nobis maiores quasi expedita nihil? Corrupti adipisci illum cum animi voluptatibus odit omnis?</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem architecto iure error aliquid earum numquam quibusdam. Cum nobis maiores quasi expedita nihil? Corrupti adipisci illum cum animi voluptatibus odit omnis?</p>
+                <p>Vous avez une question ? N'hésitez pas à <a href="#contact"> me contacter</a>.</p>
             </div>
         </section>
 
         <!-- MES OUTILS -->
+
         <section id="outils">
-            <div class="headphone-icon"><span class="iconify" data-icon="whh:headphonesalt"></span></div>
+            <div class="section-icon"><span class="iconify" data-icon="codicon:tools"></span></div>
             <h2>Mes outils</h2>
             <h3>Des outils pour vous aider à <strong>performer</strong></h3>
             <div id="outils-slider">
@@ -99,8 +106,9 @@
         </section>
     
         <!-- EQUIPE -->
+
         <section id="equipe">
-            <div class="headphone-icon"><span class="iconify" data-icon="whh:headphonesalt"></span></div>
+            <div class="section-icon"><span class="iconify" data-icon="fluent:people-team-16-regular"></span></div>
             <h2>Préparation d'équipe</h2>
             <h3>Gagnez <strong>ensemble</strong></h3>
             <img src="img/gamers.png" alt="">
@@ -116,11 +124,52 @@
 
     <!-- CONTACT -->
 
-        <section>
+        <section id="contact">
+            <div class="section-icon"><span class="iconify" data-icon="cil:envelope-letter"></span></div>
+            <h2>Contact</h2>
+            <h3>Contactez-moi</h3>
+             <div id ="social-icons">
+                <a href=#><span class="iconify" data-icon="bx:bxl-facebook-circle"></span></a>
+                <a href=#><span class="iconify" data-icon="bi:whatsapp"></span></a>
+                <a href=#><span class="iconify" data-icon="akar-icons:discord-fill"></span></a>
+            </div>
+            <p class="contact-p"><a href="mailto:hugo-preparateur@gmail.com">hugo-preparateur@gmail.com</a></p>
+            <p id="contact-telephone" class="contact-p" ><a href="tel:+33620976061">06 20 97 60 61</a></p>
+ 
+            <form action="" id="message-form">
+                <h4>Formulaire de contact</h4>
+                
+                <div><label for="name">Nom*</label></div>
+                <input type="text" name="name" id="name" required>   
+                <div><label for="mail">Email*</label></div>
+                <input type="email" name="mail" id="mail" required> 
+                <div><label for="message">Votre message*</label></div>
+                <input type="textarea" name="message" id="message" required>        
+                
+                <input type="button" id="button"value="Envoyer">
+                <p id="contact-nb" class="contact-p">* Obligatoire</p>
+
+            </form>
 
         </section>
     </main>
-    <!-- FOOTER -->
+    
+    <footer>
+        <h3>Hugo Lafarge</h3>
+        <h4>Préparateur mental e-sport</h4>
+        <p id="footer-subtitle">Préparation mental du gamer de compétition.</p>
+        <div id ="social-icons-footer">
+            <a href=#><span class="iconify" data-icon="bx:bxl-facebook-circle"></span></a>
+            <a href=#><span class="iconify" data-icon="bi:whatsapp"></span></a>
+            <a href=#><span class="iconify" data-icon="akar-icons:discord-fill"></span></a>
+        </div>
+
+        <p><a href="mailto:hugo-preparateur@gmail.com">hugo-preparateur@gmail.com</a></p>
+        <p id="telephone"><a href="tel:+33620976061">06 20 97 60 61</a></p>
+
+        <p class="last-line">Site crée par <a href="https://github.com/lafcha">lafcha</a> 2021</p>
+        <p class="last-line"> <a href="https://unsplash.com/">Crédits illustrations</a></p>
+    </footer>
   
 </body>
 </html>
