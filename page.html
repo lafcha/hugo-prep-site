@@ -111,13 +111,17 @@
             <div class="section-icon"><span class="iconify" data-icon="fluent:people-team-16-regular"></span></div>
             <h2>Préparation d'équipe</h2>
             <h3>Gagnez <strong>ensemble</strong></h3>
-            <img src="img/gamers.png" alt="">
-            <div id="communication">
-                <div class="dove-icon"><span class="iconify" data-icon="fa-solid:dove"></span></div>
-                <h4>Communication non-violente</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium eligendi eaque consectetur velit labore, nostrum ut harum quos dolore doloremque asperiores voluptatum quidem tempora amet magni aperiam, rem sed. Rerum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam molestiae fugiat eius cum nobis, officia enim similique recusandae corrupti aliquam. Iure maxime dignissimos sint! Qui repudiandae molestiae voluptatum doloremque voluptas?
-                </p>
+            <div id="equipe-container">
+                <div id="equipe-img"><img src="img/gamers.png" alt=""></div>
+                <div id="communication">
+                    <div class="dove-icon"><span class="iconify" data-icon="fa-solid:dove"></span></div>
+                    <h4>Communication non-violente</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium eligendi eaque consectetur velit labore, nostrum ut harum quos dolore doloremque asperiores voluptatum quidem tempora amet magni aperiam, rem sed. Rerum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam molestiae fugiat eius cum nobis, officia enim similique recusandae corrupti aliquam. Iure maxime dignissimos sint! Qui repudiandae molestiae voluptatum doloremque voluptas?
+                    </p>
+                </div>
+
             </div>
+
         </div>
         </section>
     
@@ -127,29 +131,37 @@
         <section id="contact">
             <div class="section-icon"><span class="iconify" data-icon="cil:envelope-letter"></span></div>
             <h2>Contact</h2>
-            <h3>Contactez-moi</h3>
-             <div id ="social-icons">
-                <a href=#><span class="iconify" data-icon="bx:bxl-facebook-circle"></span></a>
-                <a href=#><span class="iconify" data-icon="bi:whatsapp"></span></a>
-                <a href=#><span class="iconify" data-icon="akar-icons:discord-fill"></span></a>
-            </div>
-            <p class="contact-p"><a href="mailto:hugo-preparateur@gmail.com">hugo-preparateur@gmail.com</a></p>
-            <p id="contact-telephone" class="contact-p" ><a href="tel:+33620976061">06 20 97 60 61</a></p>
- 
-            <form action="" id="message-form">
-                <h4>Formulaire de contact</h4>
-                
-                <div><label for="name">Nom*</label></div>
-                <input type="text" name="name" id="name" required>   
-                <div><label for="mail">Email*</label></div>
-                <input type="email" name="mail" id="mail" required> 
-                <div><label for="message">Votre message*</label></div>
-                <input type="textarea" name="message" id="message" required>        
-                
-                <input type="button" id="button"value="Envoyer">
-                <p id="contact-nb" class="contact-p">* Obligatoire</p>
+            <div id="contact-container">
+                <div id="contact-text">
+                    <h5>Email</h5>
+                    <p class="contact-p"><a href="mailto:hugo-preparateur@gmail.com">hugo-preparateur@gmail.com</a></p>
+                    
+                    <h5>Téléphone</h5>
+                    <p id="contact-telephone" class="contact-p" ><a href="tel:+33620976061">06 20 97 60 61</a></p>
 
-            </form>
+                    <h5>En ligne</h5>
+                    <div id ="social-icons">
+                        <a href=#><span class="iconify" data-icon="bx:bxl-facebook-circle"></span></a>
+                        <a href=#><span class="iconify" data-icon="bi:whatsapp"></span></a>
+                        <a href=#><span class="iconify" data-icon="akar-icons:discord-fill"></span></a>
+                    </div>
+                </div>
+ 
+                <form action="" id="message-form">
+                    <h5>Formulaire de contact</h5>
+                    
+                    <div><label for="name">Nom*</label></div>
+                    <input type="text" name="name" id="name" required>   
+                    <div><label for="mail">Email*</label></div>
+                    <input type="email" name="mail" id="mail" required> 
+                    <div><label for="message">Votre message*</label></div>
+                    <input type="textarea" name="message" id="message" required>        
+                    
+                    <input type="button" id="button"value="Envoyer">
+                    <p id="contact-nb" class="contact-p">* Obligatoire</p>
+
+                </form>
+            </div>
 
         </section>
     </main>
@@ -164,7 +176,9 @@
             <a href=#><span class="iconify" data-icon="akar-icons:discord-fill"></span></a>
         </div>
 
+
         <p><a href="mailto:hugo-preparateur@gmail.com">hugo-preparateur@gmail.com</a></p>
+
         <p id="telephone"><a href="tel:+33620976061">06 20 97 60 61</a></p>
 
         <p class="last-line">Site crée par <a href="https://github.com/lafcha">lafcha</a> 2021</p>
