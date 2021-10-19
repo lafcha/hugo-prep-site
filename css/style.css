@@ -392,25 +392,31 @@ footer h4 {
    
 }
 
+footer h5 {
+    color : var(--accent);
+    font-size: 0.7rem;
+    margin :0;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
 
 footer p a {
     font-weight: bold;
     color : var(--accent);
 }
 
+footer #social-icons {
+    font-size: 1.5rem;
+}
+
+#footer-container {
+    padding-bottom: 3rem;
+}
+
 #footer-subtitle {
     font-style: italic;
-}
-
-#social-icons-footer {
-    margin: 1rem 0;
-    padding :0;
-}
-
-#social-icons-footer a {
-    padding-left: .3rem;
-    font-size: 1.2rem;
-    color : var(--primary);
+    font-weight: bold;
+    padding-bottom: 1.2rem;
 }
 
 .last-line {
@@ -445,6 +451,11 @@ body {
 }
 
 /*MEDIA QUERIES */
+
+
+@media (min-width:768px) {
+    /*Menu*/
+}
 
 @media (min-width: 1024px) {
 
@@ -493,6 +504,10 @@ body {
     }
 
     /*Equipe*/
+
+    #equipe {
+        padding-bottom : 3rem;
+    }
     #equipe-container {
         display : flex;
         flex-direction: row;
@@ -531,6 +546,44 @@ body {
         font-size: 1rem;
         width : 8rem;
         height: 2.8rem;
+    }
+
+    /*Footer*/
+
+    footer #social-icons {
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 1440px) {
+    /*Contact*/
+    #contact-text {
+        padding-left : 6rem;
+    }
+
+    /*Footer*/
+
+    footer #social-icons {
+        text-align: left;
+    }
+    #footer-container {
+        display : flex;
+    }
+
+    #footer-container > div {
+        width : 50%;
+    }
+    #footer-container h5 {
+        text-align: left;
+    }
+
+    #contact-footer {
+        padding-left : 15rem;
+    }
+
+    #contact-footer p {
+        text-align: left;
     }
 
 }
