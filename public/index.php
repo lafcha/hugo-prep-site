@@ -10,10 +10,15 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
-    <script src="js/menu.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+
+    <script src="assets/js/menu.js"></script>
 
     <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
 
@@ -29,11 +34,12 @@
             <a id ="home-logo" href="#home" class="active">Hugo Lafarge</a>
             
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-            <a id="hamurger-menu" href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <a id="hamburger-menu" href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i id="hamburger-icon"class="fa fa-bars"></i>
             </a>
           <!-- Navigation links (hidden by default) -->
             <ul id="myLinks">
+                <li><a href="#home">Accueil</a></li>
                 <li><a href="#presentation">Présentation</a></li>
                 <li><a href="#outils">Outils</a></li>
                 <li><a href="#equipe">Préparation d'équipe</a></li>      
@@ -61,7 +67,7 @@
         <!-- A PROPOS -->
 
         <section id="presentation">
-            <div id="presentation-img"><img src="img/portrait.png" alt=""></div>
+            <div id="presentation-img"><img src="assets/img/portrait.png" alt=""></div>
             <div id="presentation-text">
                 <div class="section-icon"><span class="iconify" data-icon="akar-icons:person"></span></span></div>
                 <h2>A propos</h2>
@@ -112,7 +118,7 @@
             <h2>Préparation d'équipe</h2>
             <h3>Gagnez <strong>ensemble</strong></h3>
             <div id="equipe-container">
-                <div id="equipe-img"><img src="img/gamers.png" alt=""></div>
+                <div id="equipe-img"><img src="assets/img/gamers.png" alt=""></div>
                 <div id="communication">
                     <div class="dove-icon"><span class="iconify" data-icon="fa-solid:dove"></span></div>
                     <h4>Communication non-violente</h4>
@@ -197,5 +203,19 @@
  
     </footer>
   
+<script>
+    $(document).ready(function () {
+        $(window).scroll(function (e) {
+        let windowTop = $(this).scrollTop();
+            $('#myLinks li a').each(function (event) {
+                if (windowTop >= $($(this).attr('href')).offset().top - 100) {
+                    // Remove 'active' from previously highlighted menu items
+                    $("myLInks li a").css("color", "a22315");
+                }
+            });
+        });
+    });
+</script>
+
 </body>
 </html>

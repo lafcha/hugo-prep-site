@@ -62,7 +62,6 @@ ul {
 .section-icon {
     font-size: 2rem;
     text-align: center;
-    padding-top: 4rem;
 }
 
 /* NAVIGATION */
@@ -81,7 +80,7 @@ ul {
    }
   
   /* Hide the links inside the navigation menu (except for logo/home) */
-  .topnav #myLinks {
+    #myLinks {
     display: none;
     background-color: var(--accent-dark);
     height : 100vh;
@@ -98,12 +97,11 @@ ul {
     font-size: 2rem; 
     line-height: 5rem;
     text-decoration: none;
-    display: hidden;
     padding: 14px 16px;
 
-}
+    }
   
-  .topnav a.icon {
+  #hamburger-icon{
     display: block;
   }
 
@@ -111,18 +109,20 @@ ul {
   text-decoration: underline;
   }
   
-
    #home-logo {
     font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color : var(--accent);
     margin:0;
     padding:0;
     padding-left: 1rem;
-   line-height: 3.5rem;
-   width: 75%;
+    line-height: 3.5rem;
   }
 
   #hamburger-menu {
     width: 15%;
+    text-align: right;
   }
 
 /*HOME*/
@@ -143,6 +143,8 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation-name: magic;
+    animation-duration: 3s;
 }
 
 #landing-text {
@@ -157,6 +159,7 @@ ul {
     background-color: var(--accent-dark);
     display : flex;
     flex-direction: column;
+    padding : var(--section-padding);
 }
 
 #presentation img {
@@ -165,7 +168,7 @@ ul {
 }
 
 #presentation-text {
-    padding: 0 1rem;
+    padding: 3rem 1rem 0;
 
 }
 
@@ -178,17 +181,21 @@ ul {
     color :var(--primary);
     font-weight: bold;
     text-decoration: underline;
-
-    
 }
 
 /*OUTILS*/
 
 #outils {
-    padding-bottom : 2rem;
+    padding : var(--section-padding);
 }
 #outils h2 {
     color: var(--accent);
+}
+
+#outils h4 {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 1rem;
 }
 
 #meditation-icon {
@@ -198,7 +205,7 @@ ul {
 .outil-card {
     background-color: var(--third);
     margin: 1rem;
-    padding :1.5rem .5rem;
+    padding :2.5rem 1rem;
 }
 
 .outil-card p {
@@ -212,6 +219,12 @@ ul {
 }
 
 /* EQUIPE */
+
+#equipe {
+    padding : var(--section-padding);
+    background : rgba(71, 71, 71, 0.35);
+    margin-bottom: 6rem;
+}
 
 #equipe h4 {
     color: var(--accent);
@@ -228,7 +241,7 @@ ul {
 }
 
 #communication {
-    padding : 2rem 1rem 6rem;
+    padding : 3rem 1rem 0;
 }
 .dove-icon{
     color : var(--third);
@@ -241,8 +254,9 @@ ul {
 
 #contact {
     background-color: var(--accent);
-    padding-bottom: 4rem;
+    padding : var(--section-padding);
     text-align: center;
+    margin-bottom : 6rem;
 }
 
 #contact h2 {
@@ -302,7 +316,7 @@ ul {
     align-items: center;
     width: 100%;
     max-width: 37.5rem;
-    padding: 2rem 0;
+    padding: 2rem 0 0 0;
     margin : auto;
 }
 
@@ -442,28 +456,89 @@ footer #social-icons {
 
 
 /*VARIABLES COULEURS */
-body {
+:root {
+
+    /*Colors*/
     --primary : #000D1D;
     --accent : #a22315;
     --accent-dark : #511819;
     --secondary : #E5E5E5;
     --third : #474747;
+
+    /*Padding*/
+    --section-padding: 5rem 0;
 }
+
+/*KEYFRAMES */
+
+@keyframes magic {
+    from {
+       
+        opacity: 0;
+    }
+    to {
+       
+        opacity: 1;
+    }
+}
+
 
 /*MEDIA QUERIES */
 
-
-@media (min-width:768px) {
-    /*Menu*/
-}
-
 @media (min-width: 1024px) {
 
+
+    /*Menu*/
+
+    .topnav {
+        flex-wrap: nowrap;
+    }
+
+    #home-logo {
+        width : 20%;
+    }
+
+    #hamburger-menu {
+        display: none;
+    }
+
+    #myLinks {
+        display : flex;
+        justify-content: flex-end;
+        background-color: var(--primary);
+        height : 60px;
+        width: auto;
+        list-style: none;
+        padding-top : 0;
+        padding-right: 1rem;
+    }
+
+    #myLinks li {
+        overflow : hidden;       
+    }
+
+    #myLinks li a {
+        font-size : 1rem;
+        line-height: 3.5rem;
+    }
+
+    #myLinks li a:hover {
+        border-bottom : solid 2px;
+        border-color: var(--secondary);
+        transition: .5s ease-in-out ;
+    }
+
+    #myLinks li a:active {
+        border-bottom : solid 2px;
+        border-color: var(--secondary);
+    }
+
+
+    
     /*Présentation */
     #presentation {
         display : flex;
         flex-direction: row;
-        padding-bottom: 0;
         align-items:center;
     }
 
@@ -557,6 +632,13 @@ body {
 }
 
 @media (min-width: 1440px) {
+
+    /*presentation*/
+
+    #presentation-text {
+        padding : 0 1rem;
+    }
+
     /*Contact*/
     #contact-text {
         padding-left : 6rem;
