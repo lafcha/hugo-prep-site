@@ -108,7 +108,8 @@ ul {
     .active {
   text-decoration: underline;
   }
-  
+
+
    #home-logo {
     font-size: 1rem;
     text-transform: uppercase;
@@ -198,6 +199,13 @@ ul {
     font-size: 1rem;
 }
 
+#outils > p, #equipe > p {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    padding : 1rem 1rem 3rem 1rem;
+}
+
 #meditation-icon {
     font-size: 3rem;
 }
@@ -231,7 +239,7 @@ ul {
     font-size: 1.2rem;
 }
 
-#equipe p {
+#communication p {
     text-align: justify;
 }
 
@@ -287,22 +295,6 @@ ul {
 .contact-icon {
     font-size: 5rem;
     color : var(--primary)
-}
-
-#social-icons {
-    width: 100%;
-    font-size: 2rem;
-    text-align: center;
-    word-spacing: 1.2rem;
-    padding-top : 1.2rem;
-}
-
-#social-icons a {
-    color : var(--secondary);
-}
-
-#social-icon:hover, #social-icon:active {
-    color : var(--accent-dark)
 }
 
 #contact-nb {
@@ -522,40 +514,37 @@ footer #social-icons {
         line-height: 3.5rem;
     }
 
+    #myLinks li a:active {
+        border-bottom: solid 2px;
+        border-color: var(--secondary);
+    }
+
     #myLinks li a:hover {
         border-bottom : solid 2px;
         border-color: var(--secondary);
         transition: .5s ease-in-out ;
     }
 
-    #myLinks li a:active {
-        border-bottom : solid 2px;
-        border-color: var(--secondary);
-    }
 
-
-    
-    /*Présentation */
+        /*Présentation */
     #presentation {
         display : flex;
         flex-direction: row;
         align-items:center;
+        padding: 2rem 10vh;
     }
 
     #presentation-img {
-        overflow: hidden;
-        width: 40%;
-        text-align: center;
+        text-align: right;
     }
 
     #presentation-img img {
-        height : 400px;
+        height : 600px;
         width: auto;
         max-width : 600px;
     }
 
     #presentation-text {
-        width: 60%;
         padding-bottom : 3rem;
   
     }
@@ -578,6 +567,12 @@ footer #social-icons {
         width : 30%;
     }
 
+    #outils > p {
+        font-size: 1.2em;
+        width : 80%;
+        margin : auto;
+    }
+
     /*Equipe*/
 
     #equipe {
@@ -595,6 +590,12 @@ footer #social-icons {
 
     #communication {
         width : 50%;
+    }
+
+    #equipe > p {
+        font-size: 1.2em;
+        width : 80%;
+        margin : auto;
     }
 
     /*Contact */
@@ -639,7 +640,15 @@ footer #social-icons {
         padding : 0 1rem;
     }
 
-    /*Contact*/
+    /*Outils */
+
+    #outils-slider {
+        width: 150vh;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+      /*Contact*/
     #contact-text {
         padding-left : 6rem;
     }
