@@ -105,7 +105,7 @@ ul {
     display: block;
 }
 
-.active {
+.active a {
     text-decoration: underline;
 }
 
@@ -575,7 +575,7 @@ footer #social-icons {
         line-height: 3.5rem;
     }
 
-    #myLinks li a:active {
+    #myLinks li a .active {
         border-bottom: solid 2px;
         border-color: var(--secondary);
     }
